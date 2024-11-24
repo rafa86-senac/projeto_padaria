@@ -27,6 +27,15 @@ nome varchar(255) not null,
 cargo varchar(255) not null
 );
 
+create table tbcartao(
+Id_cartao int primary key auto_increment,
+cogido_cartao varchar(255) not null unique,
+status enum('ativo' ,'inativo') default 'ativo',
+data_criacao datetime default current_timestamp
+
+);
+
 desc tbprodutos;
 desc tbfornecedores;
 desc tbfuncionarios;
+desc tbcartao;
